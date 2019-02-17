@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="home_t001">24°c</string>
+    <string name="home_t002">"空氣汙染:  "</string>
+    <string name="home_t003">嚴重</string>
+    <string name="home_t004">近期活動</string>
+    <string name="home_t005">More＞</string>
+    <string name="home_t009">熱門商店</string>
+
+    <string name="todo">TODO</string>
+
+</resources>

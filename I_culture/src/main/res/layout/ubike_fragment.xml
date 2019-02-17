@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light">
+
+    <ImageView
+        android:id="@+id/ubike_b001"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ubike_map" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageButton
+            android:id="@+id/ubike_b002"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/Olive"
+            app:srcCompat="@drawable/ubike_01" />
+
+        <ImageButton
+            android:id="@+id/ubike_b003"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ubike_02" />
+
+        <ImageButton
+            android:id="@+id/ubike_b004"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            app:srcCompat="@drawable/ubike_03" />
+
+        <ImageButton
+            android:id="@+id/ubike_b005"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/Lime"
+            app:srcCompat="@drawable/ubike_04" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shop03_btn01">商品介紹</string>
+    <string name="shop03_btn02">店家位置</string>
+    <string name="shop03_btn03">我要評論</string>
+</resources>

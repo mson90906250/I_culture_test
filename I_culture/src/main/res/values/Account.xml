@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Account_txt01">帳號:</string>
+    <string name="Account_txt02">密碼:</string>
+    <string name="Account_txt03">忘記密碼?</string>
+    <string name="Account_btn01">註冊</string>
+    <string name="Account_btn02">登入</string>
+    <string name="Account_btn03">使用google帳號登入</string>
+    <string name="Account_error">"帳號或密碼\n輸入錯誤"</string>
+    <string name="Account_forgetpwd">"已將密碼寄到註冊信箱\n登入後,請記得更改密碼"</string>
+    <string name="Account_account_check_error">查無此帳號</string>
+    <string name="Account_account_input_notext">請輸入帳號</string>
+    <string name="Account_welcome">"\n歡迎回來"</string>
+
+</resources>
+<!--如果要讓字串空行,需將整個字串用"    " 雙引號包起來  ,然後在裏面加入\n
+        ex:   <string name="Account_error"> "帳號或密碼\n輸入錯誤" </string>-->
