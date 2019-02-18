@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Settings_txt01">接收推播功能</string>
+    <string name="Settings_On">On</string>
+    <string name="Settings_Off">Off</string>
+    <string name="Settings_btn01">修改密碼</string>
+    <string name="Settings_btn02">更換大頭照</string>
+    <string name="Settings_btn03">離開</string>
+    <string name="Settings_chpwd_txt01">新密碼:</string>
+    <string name="Settings_chpwd_txt02">確認密碼:</string>
+    <string name="Settings_chpwd_btn01">取消</string>
+    <string name="Settings_chpwd_btn02">確認</string>
+    <string name="Settings_chpwd_btn03">離開</string>
+    <string name="Settings_chpwd_txt03">密碼與確認密碼裡的值不吻合</string>
+    <string name="Settings_chpwd_txt04">兩個欄位都要填寫!!</string>
+    <string name="Settings_chdpw_txt05">"密碼至少要有一個非數字的字\n且至少8字以上"</string>
+    <string name="Settings_title">Settings</string>
+</resources>
