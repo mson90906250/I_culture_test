@@ -1,7 +1,10 @@
 package tw.tcnr01.I_culture;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +17,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Main extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +44,18 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
     private String TAG="tcnr01=>";
     private final String IMAGE_URL = "imgURL";
     private DrawerLayout drawer;
+
+    //SQLite的語法
+    //未來會有好幾個資料表
+    private String mSQL = "CREATE TABLE " + "test" + " ( "
+            + "ID INTEGER PRIMARY KEY," + "name TEXT NOT NULL," + "imgURL TEXT NOT NULL"
+            + ");";
+    private DBHelper dbHelper;
+
+    //MySQL的語法
+    private String sqlctl;
+
+    private SQLiteDatabase db;
 
 
     @Override
@@ -70,6 +91,37 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         mTransaction = getSupportFragmentManager().beginTransaction();
         mTransaction.replace(R.id.container,homeFragment).commit();
 
+        //-------------抓取遠端資料庫設定執行續------------------------------
+        StrictMode.setThreadPolicy(new
+                StrictMode.
+                        ThreadPolicy.Builder().
+                detectDiskReads().
+                detectDiskWrites().
+                detectNetwork().
+                penaltyLog().
+                build());
+        StrictMode.setVmPolicy(
+                new
+                        StrictMode.
+                                VmPolicy.
+                                Builder().
+                        detectLeakedSqlLiteObjects().
+                        penaltyLog().
+                        penaltyDeath().
+                        build());
+//---------------------------------------------------------------------
+        dbHelper = new DBHelper(getApplicationContext(),"i_culture",null,1,"test",mSQL);
+        db = dbHelper.getWritableDatabase();
+
+  /*      有幾個資料表就要執行幾次
+        mSQL = "CREATE TABLE " + "test" + " ( "
+            + "ID INTEGER PRIMARY KEY," + "name TEXT NOT NULL," + "imgURL TEXT NOT NULL"
+            + ");";
+        db.execSQL(mSQL);
+         sqlctl = "SELECT * FROM test ORDER BY id ASC";
+        //將MySQL的資料匯入SQL
+        Mysqlsel(sqlctl);*/
+
 
         setupViewComponent();
     }
@@ -96,6 +148,66 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
             Button btn = (Button)findViewById(id);
             btn.setOnClickListener(this);
         }
+
+       /* sqlctl = "SELECT * FROM test ORDER BY id ASC";
+        //將MySQL的資料匯入SQL
+        Mysqlsel(sqlctl);*/
+
+    }
+    //將的得到的MySQL資料匯入SQL
+    private void Mysqlsel(String sqlctl) {
+
+        db = dbHelper.getWritableDatabase();
+
+        try {
+            String result = DBConnector.executeQuery(sqlctl);
+            /**************************************************************************
+             * SQL 結果有多筆資料時使用JSONArray
+             * 只有一筆資料時直接建立JSONObject物件 JSONObject
+             * jsonData = new JSONObject(result);
+             **************************************************************************/
+            //幾筆資料
+            JSONArray jsonArray = new JSONArray(result);
+            // ---
+
+            if (jsonArray.length() > 0) { // MySQL 連結成功有資料
+
+                db.delete("test",null,null);// 匯入前,刪除所有SQLite資料
+
+                //幾個欄位
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonData = jsonArray.getJSONObject(i);
+                    // // 取出 jsonObject 中的字段的值的空格
+
+                    ContentValues newRow = new ContentValues();
+
+                    Iterator itt = jsonData.keys();
+
+                    while (itt.hasNext()) {
+                        String key = itt.next().toString();
+                        Log.d(TAG, "key=" + key);
+                        String value = jsonData.getString(key);
+                        if (value == null) {
+                            continue;
+                        } else if ("".equals(value.trim())) {
+                            continue;
+                        } else {
+                            jsonData.put(key, value.trim());
+                        }
+                        //Log.d(TAG,"value= "+value);
+                        newRow.put(key, value); // 動態找出有幾個欄位
+
+                        db.insert("test","NULL",newRow);
+
+                    }
+
+                }
+            }
+        } catch (Exception e) {
+            Log.d(TAG, e.toString());
+        }
+
+        //db.close();
 
     }
 
