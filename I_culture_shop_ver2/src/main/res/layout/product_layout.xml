@@ -22,26 +22,6 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/product01" />
 
-            <LinearLayout
-                android:id="@+id/product_lay02"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/product_img02"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/product02" />
-
-                <ImageView
-                    android:id="@+id/product_img03"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/product03" />
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
