@@ -25,8 +25,8 @@ public class ShopFragment extends Fragment implements View.OnClickListener {
         //return super.onCreateView(inflater, container, savedInstanceState);
 
         View v = inflater.inflate(R.layout.shop_fragment,container,false);
-        img01=v.findViewById(R.id.shop01_img01);
-        img02=v.findViewById(R.id.shop01_img02);
+        img01=(ImageView) v.findViewById(R.id.shop01_img01);
+        img02=(ImageView)v.findViewById(R.id.shop01_img02);
 
         img01.setOnClickListener(this);
         img02.setOnClickListener(this);

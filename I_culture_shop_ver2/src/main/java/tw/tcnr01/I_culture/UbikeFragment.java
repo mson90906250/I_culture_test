@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class UbikeFragment extends Fragment implements View.OnClickListener {
@@ -22,10 +23,10 @@ public class UbikeFragment extends Fragment implements View.OnClickListener {
         //return super.onCreateView(inflater, container, savedInstanceState);
 
         View v = inflater.inflate(R.layout.ubike_fragment,container,false);
-        b001=v.findViewById(R.id.ubike_b002);
-        b002=v.findViewById(R.id.ubike_b003);
-        b003=v.findViewById(R.id.ubike_b004);
-        b004=v.findViewById(R.id.ubike_b005);
+        b001=(ImageView) v.findViewById(R.id.ubike_b002);
+        b002=(ImageView)v.findViewById(R.id.ubike_b003);
+        b003=(ImageView)v.findViewById(R.id.ubike_b004);
+        b004=(ImageView)v.findViewById(R.id.ubike_b005);
         b001.setOnClickListener(this);
         b002.setOnClickListener(this);
         b003.setOnClickListener(this);

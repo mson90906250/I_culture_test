@@ -40,9 +40,9 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
             //Log.d(TAG,"itemView= "+itemView);//確認itemView為何者 itemView為CardView 即example_item這個物件
 
             //----請在此方法裡做 findViewById的動作  id皆為選項裡的id
-            mImageView = itemView.findViewById(R.id.imgView);
-            mTextView1 = itemView.findViewById(R.id.txtView);
-            mTextView2 = itemView.findViewById(R.id.m0704_t001);
+            mImageView = (ImageView)itemView.findViewById(R.id.imgView);
+            mTextView1 =(TextView) itemView.findViewById(R.id.txtView);
+            mTextView2 =(TextView)  itemView.findViewById(R.id.m0704_t001);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -49,7 +49,7 @@ public class EventFragment extends Fragment {
         //return super.onCreateView(inflater, container, savedInstanceState);
 
         View v = inflater.inflate(R.layout.event_fragment,container,false);
-        recyclerView = v.findViewById(R.id.recyclerview1);
+        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview1);
 
         recyclerView.setHasFixedSize(true);
 

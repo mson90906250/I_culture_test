@@ -23,7 +23,6 @@
         android:background="@color/Lightblue"
         android:backgroundTint="@color/white"
         android:ems="10"
-        android:importantForAutofill="no"
         android:inputType="text"
         tools:targetApi="o" />
 
@@ -43,7 +42,6 @@
         android:background="@color/Lightblue"
         android:backgroundTint="@color/white"
         android:ems="10"
-        android:importantForAutofill="no"
         android:inputType="textPassword"
         tools:targetApi="o" />
 

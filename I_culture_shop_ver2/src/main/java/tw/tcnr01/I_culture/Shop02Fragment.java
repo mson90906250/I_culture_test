@@ -90,7 +90,7 @@ public class Shop02Fragment extends Fragment {
     }
 
     private void buildRecyclerView(View v) {
-        mRecyclerView = v.findViewById(R.id.recyclerView);
+        mRecyclerView =(RecyclerView) v.findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);//"true"使recyclerview不會因item的多寡而改變大小
         mLayoutManager = new LinearLayoutManager(getContext());
         mAdapter =  new ExampleAdapter(mExampleList);

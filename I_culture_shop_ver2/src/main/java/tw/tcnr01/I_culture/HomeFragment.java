@@ -46,14 +46,14 @@ public class HomeFragment extends Fragment {
         //return super.onCreateView(inflater, container, savedInstanceState);
 
         View v = inflater.inflate(R.layout.home_fragment,container,false);
-        gridview = v.findViewById(R.id.m0703_g001);
+        gridview = (GridView) v.findViewById(R.id.m0703_g001);
         setGridView();
 
         //----------------------幻燈片----------------------
-        viewPager = v.findViewById(R.id.viewPager);
+        viewPager =(ViewPager) v.findViewById(R.id.viewPager);
         adapter = new SliderViewPagerAdapter(getActivity(),images);
         viewPager.setAdapter(adapter);
-        sliderDots = v.findViewById(R.id.SliderDots);
+        sliderDots = (LinearLayout) v.findViewById(R.id.SliderDots);
         dotCounts = adapter.getCount();
         dots = new ImageView[dotCounts];
         for(int i=0;i<dotCounts;i++) {

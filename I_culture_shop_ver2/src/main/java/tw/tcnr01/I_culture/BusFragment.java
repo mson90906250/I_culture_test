@@ -23,7 +23,7 @@ public class BusFragment extends Fragment implements View.OnClickListener {
         //return super.onCreateView(inflater, container, savedInstanceState);
 
         View v = inflater.inflate(R.layout.bus_fragment,container,false);
-        b001 =v. findViewById(R.id.bus_b001);
+        b001 =(Button) v. findViewById(R.id.bus_b001);
         b001.setOnClickListener(this);
 
         return v;
