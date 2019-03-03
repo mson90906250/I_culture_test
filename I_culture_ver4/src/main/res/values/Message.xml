@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_t001">評論</string>
+    <string name="message_b001">取消並返回</string>
+    <string name="message_b002">確認送出</string>
+</resources>

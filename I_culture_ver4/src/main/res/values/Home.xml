@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_t001">今日天氣</string>
+    <string name="home_t002">空氣汙染:</string>
+    <string name="home_t003">嚴重</string>
+    <string name="home_t004">近期活動</string>
+    <string name="home_t005">More＞</string>
+    <string name="home_t009">熱門商店</string>
+    <string name="home_t006">晴朗</string>
+    <string name="t001">縣市</string>
+    <string name="t002">觀測點</string>
+    <string name="t003">PM2.5</string>
+    <string name="t004">狀態</string>
+    <string name="t004_2">AQI</string>
+    <string-array name="m1107_a001">
+        <item>選擇震動模式</item>
+        <item>長震動3秒</item>
+        <item>短震動0.1秒</item>
+        <item>停0.5秒之後震動1秒(三遍)</item>
+        <item>停0.5秒之後震動1秒(持續重覆)</item>
+        <item>停0.5秒之後震動1秒(重覆三次)</item>
+        <item>逼逼聲</item>
+        <item>震動+Morse sos</item>
+    </string-array>
+
+</resources>

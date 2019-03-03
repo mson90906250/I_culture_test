@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shop02_btn01">店家位置</string>
+    <string name="shop02_btn02">產品介紹</string>
+    <string name="shop02_btn03">加入最愛</string>
+    <string name="shop02_m001">已加入最愛</string>
+    <string-array name="shop_Array">
+        <item>牛奶泡芙之家</item>
+        <item>魚刺雞蛋糕</item>
+        <item>冰淇淋之家</item>
+        <item>節能屋</item>
+        <item>豆豆小舖</item>
+        <item>薑母鴨</item>
+    </string-array>
+
+    <string-array name="shop_introduce_array">
+        <item>超奶牛奶泡芙</item>
+        <item>小心有刺，本店概不負責</item>
+        <item>很 冰，小心別凍傷</item>
+        <item>節能屋什麼都有賣歐</item>
+        <item>咖啡很好喝</item>
+        <item>天氣冷就是要吃薑母鴨</item>
+    </string-array>
+</resources>
