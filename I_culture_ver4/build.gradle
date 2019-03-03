@@ -39,4 +39,6 @@ dependencies {
     //account
     implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     //要用MySQLi就要這段
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }

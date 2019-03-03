@@ -2,6 +2,7 @@ package tw.tcnr01.I_culture;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -71,6 +72,26 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         homeFragment = new HomeFragment();
         mTransaction = getSupportFragmentManager().beginTransaction();
         mTransaction.replace(R.id.container,homeFragment).commit();
+
+        //-------------抓取遠端資料庫設定執行續------------------------------
+        StrictMode.setThreadPolicy(new
+                StrictMode.
+                        ThreadPolicy.Builder().
+                detectDiskReads().
+                detectDiskWrites().
+                detectNetwork().
+                penaltyLog().
+                build());
+        StrictMode.setVmPolicy(
+                new
+                        StrictMode.
+                                VmPolicy.
+                                Builder().
+                        detectLeakedSqlLiteObjects().
+                        penaltyLog().
+                        penaltyDeath().
+                        build());
+//---------------------------------------------------------------------
 
 
         setupViewComponent();
