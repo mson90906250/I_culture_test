@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Register_txt01">帳號:</string>
+    <string name="Register_txt02">"至少要有一個非數字的字\n且在6~20字間"</string>
+    <string name="Register_txt03">密碼:</string>
+    <string name="Register_txt04">"至少要有一個非數字的字\n且至少8字以上"</string>
+    <string name="Register_txt05">確認密碼:</string>
+    <string name="Register_txt06">聯絡信箱:</string>
+    <string name="Register_btn01">取消並返回</string>
+    <string name="Register_btn02">確認</string>
+    <string name="Register_error">帳號或密碼輸入錯誤</string>
+    <string name="Register_recheck_password">密碼與確認密碼中的值不吻合</string>
+    <string name="Register_mail_notext">請輸入信箱</string>
+    <string name="Register_register_success">註冊成功!!</string>
+    <string name="Register_mail_nomatch">請符合信箱格式</string>
+</resources>
